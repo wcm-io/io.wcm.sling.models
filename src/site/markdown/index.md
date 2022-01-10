@@ -54,6 +54,11 @@ It has basically the same feature-set as the wcm.io version, but it uses name-ba
 The wcm.io AEM Object injector use class-based injection, making it easier to use independently from the field name. Since version 1.1 it supports more features than the ACS AEM Commons version.
 
 
+### GitHub Repository
+
+Sources: https://github.com/wcm-io/io.wcm.sling.models
+
+
 [usage]: usage.html
 [apidocs]: apidocs/
 [apidocs-aemobjectinjector]: apidocs/io/wcm/sling/models/annotations/AemObject.html
