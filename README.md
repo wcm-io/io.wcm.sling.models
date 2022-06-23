@@ -1,7 +1,7 @@
 <img src="https://wcm.io/images/favicon-16@2x.png"/> AEM Sling Models Extensions
 ======
 [![Build](https://github.com/wcm-io/io.wcm.sling.models/workflows/Build/badge.svg?branch=develop)](https://github.com/wcm-io/io.wcm.sling.models/actions?query=workflow%3ABuild+branch%3Adevelop)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.models/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.models)
+[![Maven Central](https://img.shields.io/maven-central/v/io.wcm/io.wcm.sling.models)](https://repo1.maven.org/maven2/io/wcm/io.wcm.sling.models/)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=wcm-io_io.wcm.sling.models&metric=coverage)](https://sonarcloud.io/summary/new_code?id=wcm-io_io.wcm.sling.models)
 
 AEM Object Injector for Sling Models.
