@@ -7,7 +7,7 @@
 AEM Object Injector for Sling Models.
 
 Documentation: https://wcm.io/sling/models/<br/>
-Issues: https://wcm-io.atlassian.net/browse/WSLI<br/>
+Issues: https://github.com/wcm-io/io.wcm.sling.models/issues<br/>
 Wiki: https://wcm-io.atlassian.net/wiki/<br/>
 Continuous Integration: https://github.com/wcm-io/io.wcm.sling.models/actions<br/>
 Commercial support: https://wcm.io/commercial-support.html
