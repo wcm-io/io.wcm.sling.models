@@ -217,7 +217,7 @@ public @interface AemObject {
    * @return Optional
    * @deprecated Use {@link #injectionStrategy()} instead
    */
-  @Deprecated
+  @Deprecated(since = "1.2.0")
   boolean optional() default false;
 
 }
