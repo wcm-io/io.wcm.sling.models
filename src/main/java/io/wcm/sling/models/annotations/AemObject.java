@@ -30,9 +30,9 @@ import java.lang.annotation.Target;
 import org.apache.sling.models.annotations.Source;
 import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.spi.injectorspecific.InjectAnnotation;
+import org.apache.sling.xss.XSSAPI;
 
 import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.xss.XSSAPI;
 import com.day.cq.i18n.I18n;
 import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.AuthoringUIMode;
@@ -186,7 +186,7 @@ import io.wcm.sling.models.injectors.impl.AemObjectInjector;
 @Retention(RUNTIME)
 @InjectAnnotation
 @Source(AemObjectInjector.NAME)
-@SuppressWarnings({ "deprecation", "javadoc" })
+@SuppressWarnings("javadoc")
 public @interface AemObject {
 
   /**

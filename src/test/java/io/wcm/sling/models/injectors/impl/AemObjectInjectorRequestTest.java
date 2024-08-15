@@ -41,6 +41,7 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.models.spi.DisposalCallbackRegistry;
 import org.apache.sling.testing.mock.sling.ResourceResolverType;
+import org.apache.sling.xss.XSSAPI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -51,7 +52,6 @@ import org.mockito.quality.Strictness;
 
 import com.adobe.cq.sightly.WCMBindings;
 import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.xss.XSSAPI;
 import com.day.cq.i18n.I18n;
 import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.AuthoringUIMode;

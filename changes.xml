@@ -23,7 +23,13 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
-    <release version="1.7.0" date="not released">
+    <release version="2.0.0" date="not released">
+      <action type="add" dev="sseifert" issue="3"><![CDATA[
+        Add support to inject <code>org.apache.sling.xss.XSSAPI</code>.
+      ]]></action>
+      <action type="remove" dev="sseifert" issue="3"><![CDATA[
+        Remove support to inject <code>com.adobe.granite.xss.XSSAPI</code> (deprecated by Adobe).
+      ]]></action>
       <action type="update" dev="sseifert">
         Switch to Java 11 as minimum version.
       </action>
