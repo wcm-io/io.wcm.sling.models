@@ -82,6 +82,7 @@ public final class SlingObjectOverlayInjector implements Injector, StaticInjectA
   }
 
   @Override
+  @SuppressWarnings("java:S3776") // complexity
   public Object getValue(@NotNull final Object adaptable, final String name, @NotNull final Type type,
       @NotNull final AnnotatedElement element, @NotNull final DisposalCallbackRegistry callbackRegistry) {
 
