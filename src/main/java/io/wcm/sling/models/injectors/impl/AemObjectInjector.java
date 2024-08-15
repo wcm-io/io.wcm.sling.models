@@ -35,6 +35,7 @@ import org.apache.sling.models.spi.Injector;
 import org.apache.sling.models.spi.injectorspecific.AbstractInjectAnnotationProcessor2;
 import org.apache.sling.models.spi.injectorspecific.InjectAnnotationProcessor2;
 import org.apache.sling.models.spi.injectorspecific.StaticInjectAnnotationProcessorFactory;
+import org.apache.sling.xss.XSSAPI;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.osgi.framework.Constants;
@@ -43,7 +44,6 @@ import org.osgi.service.component.annotations.Reference;
 
 import com.adobe.cq.sightly.WCMBindings;
 import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.xss.XSSAPI;
 import com.day.cq.i18n.I18n;
 import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.AuthoringUIMode;
@@ -72,7 +72,6 @@ import io.wcm.sling.models.annotations.AemObject;
      */
     Constants.SERVICE_RANKING + ":Integer=" + 4400
 })
-@SuppressWarnings("deprecation")
 public final class AemObjectInjector implements Injector, StaticInjectAnnotationProcessorFactory, AcceptsNullName {
 
   /**
@@ -265,6 +264,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
     return null;
   }
 
+  @SuppressWarnings("deprecation")
   private @Nullable Style getStyle(@NotNull final SlingHttpServletRequest request) {
     Style style = null;
     // first try to get from sling bindings
@@ -372,6 +372,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public Boolean isOptional() {
       return annotation.optional();
     }
