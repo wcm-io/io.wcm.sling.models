@@ -30,9 +30,9 @@ import java.lang.annotation.Target;
 import org.apache.sling.models.annotations.Source;
 import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.spi.injectorspecific.InjectAnnotation;
+import org.apache.sling.xss.XSSAPI;
 
 import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.xss.XSSAPI;
 import com.day.cq.i18n.I18n;
 import com.day.cq.tagging.TagManager;
 import com.day.cq.wcm.api.AuthoringUIMode;
@@ -145,7 +145,7 @@ import io.wcm.sling.models.injectors.impl.AemObjectInjector;
  * </tr>
  * <tr style="background-color:#eee">
  * <td>{@link I18n}</td>
- * <td>I18n object for the current resource/page context. Default to be inejctes for {@link I18n} types.</td>
+ * <td>I18n object for the current resource/page context. Default to be injected for {@link I18n} types.</td>
  * <td>resourceI18n</td>
  * <td style="text-align:center">X</td>
  * <td style="text-align:center">X*</td>
@@ -186,7 +186,7 @@ import io.wcm.sling.models.injectors.impl.AemObjectInjector;
 @Retention(RUNTIME)
 @InjectAnnotation
 @Source(AemObjectInjector.NAME)
-@SuppressWarnings({ "deprecation", "javadoc" })
+@SuppressWarnings("javadoc")
 public @interface AemObject {
 
   /**
@@ -217,7 +217,7 @@ public @interface AemObject {
    * @return Optional
    * @deprecated Use {@link #injectionStrategy()} instead
    */
-  @Deprecated
+  @Deprecated(since = "1.2.0")
   boolean optional() default false;
 
 }

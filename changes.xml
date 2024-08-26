@@ -23,6 +23,21 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
+    <release version="2.0.0" date="2024-08-26">
+      <action type="add" dev="sseifert" issue="3"><![CDATA[
+        Add support to inject <code>org.apache.sling.xss.XSSAPI</code>.
+      ]]></action>
+      <action type="remove" dev="sseifert" issue="3"><![CDATA[
+        Remove support to inject <code>com.adobe.granite.xss.XSSAPI</code> (deprecated by Adobe).
+      ]]></action>
+      <action type="update" dev="sseifert">
+        Switch to Java 11 as minimum version.
+      </action>
+      <action type="update" dev="sseifert">
+        Switch to AEM 6.5.17 as minimum version.
+      </action>
+    </release>
+
     <release version="1.6.0" date="2021-01-17">
       <action type="update" dev="sseifert">
         Switch to AEM 6.4 as minimum version.

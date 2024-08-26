@@ -2,7 +2,7 @@
 
 AEM Object Injector for Sling Models.
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.models/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.models)
+[![Maven Central](https://img.shields.io/maven-central/v/io.wcm/io.wcm.sling.models)](https://repo1.maven.org/maven2/io/wcm/io.wcm.sling.models/)
 
 
 ### Documentation
@@ -31,7 +31,8 @@ See [Injector API documentation][apidocs-aemobjectinjector] for details.
 
 |wcm.io AEM Sling Models Extensions version |AEM version supported
 |-------------------------------------------|----------------------
-|1.6.x or higher                            |AEM 6.4+
+|1.7.x or higher                            |AEM 6.5.17+, AEMaaCS
+|1.6.x                                      |AEM 6.4+, AEMaaCS
 |1.5.x                                      |AEM 6.2+
 |1.0.x - 1.4.x                              |AEM 6.1+
 |0.x                                        |AEM 6.0+
@@ -42,7 +43,7 @@ See [Injector API documentation][apidocs-aemobjectinjector] for details.
 To use this module you have to deploy also:
 
 |---|---|---|
-| [wcm.io Sling Commons](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.commons) | [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.commons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.wcm/io.wcm.sling.commons) |
+| [wcm.io Sling Commons](https://repo1.maven.org/maven2/io/wcm/io.wcm.sling.commons/) | [![Maven Central](https://img.shields.io/maven-central/v/io.wcm/io.wcm.sling.commons)](https://repo1.maven.org/maven2/io/wcm/io.wcm.sling.commons/) |
 
 
 ### Comparison to ACS Commons
@@ -51,6 +52,11 @@ The [ACS AEM Commons][acs-commons] project also contains an implementation of an
 It has basically the same feature-set as the wcm.io version, but it uses name-based injection based on field names.
 
 The wcm.io AEM Object injector use class-based injection, making it easier to use independently from the field name. Since version 1.1 it supports more features than the ACS AEM Commons version.
+
+
+### GitHub Repository
+
+Sources: https://github.com/wcm-io/io.wcm.sling.models
 
 
 [usage]: usage.html
