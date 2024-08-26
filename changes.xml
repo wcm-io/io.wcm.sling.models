@@ -23,7 +23,7 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
-    <release version="2.0.0" date="not released">
+    <release version="2.0.0" date="2024-08-26">
       <action type="add" dev="sseifert" issue="3"><![CDATA[
         Add support to inject <code>org.apache.sling.xss.XSSAPI</code>.
       ]]></action>
