@@ -62,6 +62,6 @@ Sources: https://github.com/wcm-io/io.wcm.sling.models
 [usage]: usage.html
 [apidocs]: apidocs/
 [apidocs-aemobjectinjector]: apidocs/io/wcm/sling/models/annotations/AemObject.html
-[changelog]: changes-report.html
+[changelog]: changes.html
 [acs-commons]: http://adobe-consulting-services.github.io/acs-aem-commons/
 [acs-commons-aem-object-injrecotr]: http://adobe-consulting-services.github.io/acs-aem-commons/features/aem-sling-models-injectors.html
