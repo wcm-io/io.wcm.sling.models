@@ -60,7 +60,9 @@ import io.wcm.sling.commons.request.RequestContext;
  * request-bound thread: resource resolver, current resource, request, response, sling script helper.
  * </p>
  */
-@Component(service = { Injector.class, StaticInjectAnnotationProcessorFactory.class }, property = {
+@Component(service = {
+    Injector.class, StaticInjectAnnotationProcessorFactory.class
+}, property = {
     // use ranking MAX_VALUE - 10 to overlay the sling-object injector of sling which is registered to MAX_VALUE
     Constants.SERVICE_RANKING + ":Integer=" + (Integer.MAX_VALUE - 10)
 })
@@ -163,7 +165,9 @@ public final class SlingObjectOverlayInjector implements Injector, StaticInjectA
     return null;
   }
 
-  @SuppressWarnings({ "null", "unused" })
+  @SuppressWarnings({
+      "null", "unused"
+  })
   @Override
   public InjectAnnotationProcessor2 createAnnotationProcessor(final AnnotatedElement element) {
     // check if the element has the expected annotation
