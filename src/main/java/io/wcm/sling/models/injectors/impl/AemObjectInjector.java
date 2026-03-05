@@ -63,7 +63,9 @@ import io.wcm.sling.models.annotations.AemObject;
  * Injects common AEM objects that can be derived from a SlingHttpServletRequest.
  * Documentation see {@link AemObject}.
  */
-@Component(service = { Injector.class, StaticInjectAnnotationProcessorFactory.class }, property = {
+@Component(service = {
+    Injector.class, StaticInjectAnnotationProcessorFactory.class
+}, property = {
     /*
      * SERVICE_RANKING of this service should be lower than the ranking of the OsgiServiceInjector (5000),
      * otherwise the generic XSSAPI service would be injected from the OSGi Service Registry instead of the
@@ -348,7 +350,9 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
     return (SlingBindings)request.getAttribute(SlingBindings.class.getName());
   }
 
-  @SuppressWarnings({ "null", "unused" })
+  @SuppressWarnings({
+      "null", "unused"
+  })
   @Override
   public InjectAnnotationProcessor2 createAnnotationProcessor(final AnnotatedElement element) {
     // check if the element has the expected annotation

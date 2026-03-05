@@ -182,7 +182,9 @@ import io.wcm.sling.models.injectors.impl.AemObjectInjector;
  * request nothing is injected.
  * </p>
  */
-@Target({ METHOD, FIELD, PARAMETER })
+@Target({
+    METHOD, FIELD, PARAMETER
+})
 @Retention(RUNTIME)
 @InjectAnnotation
 @Source(AemObjectInjector.NAME)
