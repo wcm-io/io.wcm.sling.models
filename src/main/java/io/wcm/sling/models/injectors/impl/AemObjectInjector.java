@@ -23,7 +23,7 @@ import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Type;
 import java.util.Locale;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -123,7 +123,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
         return getXssApi(request);
       }
       if (requestedClass.equals(I18n.class)) {
-        if (StringUtils.equals(name, USER_I18N)) {
+        if (Strings.CS.equals(name, USER_I18N)) {
           return getUserI18n(request);
         }
         else {
@@ -136,7 +136,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
       return getPageManager(adaptable);
     }
     else if (requestedClass.equals(Page.class)) {
-      if (StringUtils.equals(name, RESOURCE_PAGE)) {
+      if (Strings.CS.equals(name, RESOURCE_PAGE)) {
         return getResourcePage(adaptable);
       }
       else {

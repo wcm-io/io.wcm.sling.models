@@ -50,11 +50,13 @@ import io.wcm.sling.commons.request.RequestContext;
  * Injects common Sling objects that can be derived from either a SlingHttpServletRequest, a ResourceResolver or a
  * Resource.
  * Documentation see {@link SlingObject}.
+ *
  * <p>
  * This is an overlay of the SlingObject injector provided by the Sling Models implementation itself. It adds support to
  * always get the sling request and all objects that can be derived from it whether the adaptable is a request or not -
  * using a thread local (see also SLING-4083).
  * </p>
+ *
  * <p>
  * With this overlay it is possible to always get these context objects if the adaption is done in context of a
  * request-bound thread: resource resolver, current resource, request, response, sling script helper.

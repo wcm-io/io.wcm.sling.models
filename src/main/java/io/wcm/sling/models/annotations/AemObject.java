@@ -50,6 +50,7 @@ import io.wcm.sling.models.injectors.impl.AemObjectInjector;
  * Injects common AEM objects that can be derived from a SlingHttpServletRequest.
  * The injection is class-based, but may be supported by name hints when multiple targets are available for the same
  * class.
+ *
  * <p>
  * Supports the following objects:
  * </p>
@@ -176,6 +177,7 @@ import io.wcm.sling.models.injectors.impl.AemObjectInjector;
  * <td style="text-align:center">X</td>
  * </tr>
  * </table>
+ *
  * <p>
  * In case of X* the class cannot be derived from the adaptable, but is derived from the request of the current thread
  * detected via {@link io.wcm.sling.commons.request.RequestContext}. If the current thread is not associated with a
@@ -194,6 +196,7 @@ public @interface AemObject {
   /**
    * Specifies the name of the request attribute. If empty or not set, then the name
    * is derived from the method or field.
+   *
    * <p>
    * For most injections of AemObject this is not required, it is only use as name-hint for injectint a Page object.
    * </p>
