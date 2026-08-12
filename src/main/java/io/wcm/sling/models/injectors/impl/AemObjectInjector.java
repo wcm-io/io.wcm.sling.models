@@ -54,7 +54,6 @@ import com.day.cq.wcm.api.components.ComponentContext;
 import com.day.cq.wcm.api.designer.Design;
 import com.day.cq.wcm.api.designer.Designer;
 import com.day.cq.wcm.api.designer.Style;
-import com.day.cq.wcm.commons.WCMUtils;
 
 import io.wcm.sling.commons.request.RequestContext;
 import io.wcm.sling.models.annotations.AemObject;
@@ -255,7 +254,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
   }
 
   private @Nullable ComponentContext getComponentContext(@NotNull final SlingHttpServletRequest request) {
-    return WCMUtils.getComponentContext(request);
+    return (ComponentContext)request.getAttribute(ComponentContext.CONTEXT_ATTR_NAME);
   }
 
   private @Nullable Design getCurrentDesign(final Object adaptable) {
