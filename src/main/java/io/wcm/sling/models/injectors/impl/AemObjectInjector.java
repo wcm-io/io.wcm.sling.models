@@ -23,7 +23,7 @@ import java.lang.reflect.AnnotatedElement;
 import java.lang.reflect.Type;
 import java.util.Locale;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -54,7 +54,6 @@ import com.day.cq.wcm.api.components.ComponentContext;
 import com.day.cq.wcm.api.designer.Design;
 import com.day.cq.wcm.api.designer.Designer;
 import com.day.cq.wcm.api.designer.Style;
-import com.day.cq.wcm.commons.WCMUtils;
 
 import io.wcm.sling.commons.request.RequestContext;
 import io.wcm.sling.models.annotations.AemObject;
@@ -63,7 +62,9 @@ import io.wcm.sling.models.annotations.AemObject;
  * Injects common AEM objects that can be derived from a SlingHttpServletRequest.
  * Documentation see {@link AemObject}.
  */
-@Component(service = { Injector.class, StaticInjectAnnotationProcessorFactory.class }, property = {
+@Component(service = {
+    Injector.class, StaticInjectAnnotationProcessorFactory.class
+}, property = {
     /*
      * SERVICE_RANKING of this service should be lower than the ranking of the OsgiServiceInjector (5000),
      * otherwise the generic XSSAPI service would be injected from the OSGi Service Registry instead of the
@@ -121,7 +122,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
         return getXssApi(request);
       }
       if (requestedClass.equals(I18n.class)) {
-        if (StringUtils.equals(name, USER_I18N)) {
+        if (Strings.CS.equals(name, USER_I18N)) {
           return getUserI18n(request);
         }
         else {
@@ -134,7 +135,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
       return getPageManager(adaptable);
     }
     else if (requestedClass.equals(Page.class)) {
-      if (StringUtils.equals(name, RESOURCE_PAGE)) {
+      if (Strings.CS.equals(name, RESOURCE_PAGE)) {
         return getResourcePage(adaptable);
       }
       else {
@@ -253,7 +254,7 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
   }
 
   private @Nullable ComponentContext getComponentContext(@NotNull final SlingHttpServletRequest request) {
-    return WCMUtils.getComponentContext(request);
+    return (ComponentContext)request.getAttribute(ComponentContext.CONTEXT_ATTR_NAME);
   }
 
   private @Nullable Design getCurrentDesign(final Object adaptable) {
@@ -348,7 +349,9 @@ public final class AemObjectInjector implements Injector, StaticInjectAnnotation
     return (SlingBindings)request.getAttribute(SlingBindings.class.getName());
   }
 
-  @SuppressWarnings({ "null", "unused" })
+  @SuppressWarnings({
+      "null", "unused"
+  })
   @Override
   public InjectAnnotationProcessor2 createAnnotationProcessor(final AnnotatedElement element) {
     // check if the element has the expected annotation

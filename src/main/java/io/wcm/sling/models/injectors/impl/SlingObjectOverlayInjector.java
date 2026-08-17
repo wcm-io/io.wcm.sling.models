@@ -50,17 +50,21 @@ import io.wcm.sling.commons.request.RequestContext;
  * Injects common Sling objects that can be derived from either a SlingHttpServletRequest, a ResourceResolver or a
  * Resource.
  * Documentation see {@link SlingObject}.
+ *
  * <p>
  * This is an overlay of the SlingObject injector provided by the Sling Models implementation itself. It adds support to
  * always get the sling request and all objects that can be derived from it whether the adaptable is a request or not -
  * using a thread local (see also SLING-4083).
  * </p>
+ *
  * <p>
  * With this overlay it is possible to always get these context objects if the adaption is done in context of a
  * request-bound thread: resource resolver, current resource, request, response, sling script helper.
  * </p>
  */
-@Component(service = { Injector.class, StaticInjectAnnotationProcessorFactory.class }, property = {
+@Component(service = {
+    Injector.class, StaticInjectAnnotationProcessorFactory.class
+}, property = {
     // use ranking MAX_VALUE - 10 to overlay the sling-object injector of sling which is registered to MAX_VALUE
     Constants.SERVICE_RANKING + ":Integer=" + (Integer.MAX_VALUE - 10)
 })
@@ -163,7 +167,9 @@ public final class SlingObjectOverlayInjector implements Injector, StaticInjectA
     return null;
   }
 
-  @SuppressWarnings({ "null", "unused" })
+  @SuppressWarnings({
+      "null", "unused"
+  })
   @Override
   public InjectAnnotationProcessor2 createAnnotationProcessor(final AnnotatedElement element) {
     // check if the element has the expected annotation

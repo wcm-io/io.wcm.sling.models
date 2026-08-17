@@ -18,20 +18,19 @@
   limitations under the License.
   #L%
   -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>io.wcm</groupId>
     <artifactId>io.wcm.parent_toplevel</artifactId>
-    <version>2.3.2</version>
-    <relativePath/>
+    <version>2.9.0</version>
+    <relativePath />
   </parent>
 
   <groupId>io.wcm</groupId>
   <artifactId>io.wcm.sling.models</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0</version>
   <packaging>jar</packaging>
 
   <name>AEM Sling Models Extensions</name>
@@ -41,15 +40,15 @@
   <scm>
     <connection>scm:git:https://github.com/wcm-io/io.wcm.sling.models.git</connection>
     <developerConnection>scm:git:https://github.com/wcm-io/io.wcm.sling.models.git</developerConnection>
-    <url>https://github.com/wcm-io/io.wcm.sling.models</url>
     <tag>HEAD</tag>
+    <url>https://github.com/wcm-io/io.wcm.sling.models</url>
   </scm>
 
   <properties>
     <site.url.module.prefix>sling/models</site.url.module.prefix>
 
     <!-- Enable reproducible builds -->
-    <project.build.outputTimestamp>2024-08-26T09:25:59Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-08-17T08:49:02Z</project.build.outputTimestamp>
   </properties>
 
   <dependencies>
@@ -79,17 +78,12 @@
 
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-api</artifactId>
+      <artifactId>junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-params</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter-engine</artifactId>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -105,7 +99,7 @@
     <dependency>
       <groupId>io.wcm</groupId>
       <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
-      <version>5.6.0</version>
+      <version>5.7.4</version>
       <scope>test</scope>
     </dependency>
     <dependency>
